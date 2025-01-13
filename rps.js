@@ -1,4 +1,4 @@
-
+// Step 2: Write the logic to get the computer choice
 function getComputerChoice() {
  let numChoice = Math.floor(Math.random() * 3);
 
@@ -14,7 +14,7 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
-
+// Step 3: Write the logic to get the human choice
 function getHumanChoice() {
  let choice = prompt("Choose one: Rock, Paper, or Scissors");
 
@@ -30,5 +30,6 @@ function getHumanChoice() {
 }
 getHumanChoice();
 
+// Step 4: Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
