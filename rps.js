@@ -27,5 +27,4 @@ function getHumanChoice() {
   console.log("Please make a choice.")
  }
 }
-
-console.log(getHumanChoice());
+getHumanChoice();
