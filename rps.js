@@ -33,3 +33,11 @@ getHumanChoice();
 // Step 4: Declare the players score variables
 let humanScore = 0;
 let computerScore = 0;
+
+// Step 5: Write the logic to play a single round
+function playRound(humanChoice, computerChoice) {
+
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
