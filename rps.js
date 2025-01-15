@@ -28,18 +28,6 @@ function verifyWinner(playerChoice, computerChoice) {
  }
 }
 
-function playRound(playerChoice, computerChoice) {
- const result = verifyWinner(playerChoice, computerChoice);
- if (result == "Tie") {
-  return "it's a tie!";
- }
- else if (result == "Player") {
-  return `Player wins! ${playerChoice} beats ${computerChoice}`
- }
- else {
-  return `Computer wins, you lose. ${computerChoice} beats ${playerChoice}`
- }
-}
 
 function getPlayerChoice() {
  let input = false;
@@ -62,6 +50,20 @@ function getPlayerChoice() {
 }
 
 function playGame() {
+ 
+ function playRound(playerChoice, computerChoice) {
+  const result = verifyWinner(playerChoice, computerChoice);
+  if (result == "Tie") {
+   return "it's a tie!";
+  }
+  else if (result == "Player") {
+   return `Player wins! ${playerChoice} beats ${computerChoice}`
+  }
+  else {
+   return `Computer wins, you lose. ${computerChoice} beats ${playerChoice}`
+  }
+ }
+
  let playerScore = 0;
  let computerScore = 0;
  console.log("Welcome!")
