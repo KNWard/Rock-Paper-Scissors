@@ -1,96 +1,106 @@
-// Step 2: Write the logic to get the computer choice
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const playerScoreP = document.getElementById("player-score");
+const computerScoreP = document.getElementById("computer-score");
+const playerChoiceP = document.getElementById("player-choice");
+const computerChoiceP = document.getElementById("computer-choice");
+const resultP = document.getElementById("result");
+const gameBoard = document.getElementById("game-board");
+const newGame = document.getElementById("new-game-board");
+let playerScore = 0;
+let computerScore = 0;
+
+window.onload = getPlayerChoice();
+
 function getComputerChoice() {
- const options = Math.floor(Math.random() * 3);
- 
- switch (options) {
-  case 0:
-   return "rock";
-  case 1:
-   return "paper";
-  case 2:
-   return "scissors";
- }
+  const options = Math.floor(Math.random() * 3);
+
+  switch (options) {
+    case 0:
+      return "rock";
+    case 1:
+      return "paper";
+    case 2:
+      return "scissors";
+  }
 }
 
-function verifyWinner(playerChoice, computerChoice) {
- if (playerChoice === computerChoice) {
-  return "Tie";
- }
- else if (
-  (playerChoice == "rock" && computerChoice == "scissors") ||
-  (playerChoice == "scissors" && computerChoice == "paper") ||
-  (playerChoice == "paper" && computerChoice == "rock" )
- ) {
-  return "Player";
- }
- else {
-  return "Computer";
- }
-}
-
-// Write the logic to get the player choice
 function getPlayerChoice() {
- let input = false;
- while (input === false) {
-  const choice = prompt("Choose one: Rock, Paper, or Scissors");
-  if (choice === null) {
-   continue;
-  }
-  else if (choice.toLowerCase() === "rock") {
-   return "rock";
-  }
-  else if (choice.toLowerCase() === "paper") {
-   return "paper";
-  }
-  else if (choice.toLowerCase() === "scissors") {
-   return "scissors";
-  }
- }
-
+  rockBtn.addEventListener("click", (e) => {
+    return playRound("rock");
+  });
+  paperBtn.addEventListener("click", (e) => {
+    return playRound("paper");
+  });
+  scissorsBtn.addEventListener("click", (e) => {
+    return playRound("scissors");
+  });
 }
 
-// Entire game logic and round logic
-function playGame() {
+function playRound(playerChoice) {
+  let computerChoice = getComputerChoice();
 
- function playRound(playerChoice, computerChoice) {
-  const result = verifyWinner(playerChoice, computerChoice);
-  if (result == "Tie") {
-   return "it's a tie!";
+  if (playerChoice === computerChoice) {
+    scoreKeep("", playerChoice, computerChoice);
+  } else if (
+    (playerChoice === "rock" && computerChoice === "scissors") ||
+    (playerChoice == "scissors" && computerChoice == "paper") ||
+    (playerChoice == "paper" && computerChoice == "rock")
+  ) {
+    playerScore++;
+    scoreKeep("Player Wins", playerChoice, computerChoice);
+  } else {
+    computerScore++;
+    scoreKeep("Computer Wins", playerChoice, computerChoice);
   }
-  else if (result == "Player") {
-   return `Player wins! ${playerChoice} beats ${computerChoice}`
-  }
-  else {
-   return `Computer wins, you lose. ${computerChoice} beats ${playerChoice}`
-  }
- }
-  
- // Score logic- computer and player score variables
- let playerScore = 0;
- let computerScore = 0;
- console.log("Welcome! Let's play.")
- for (let i = 0; i < 5; i++){
-  const playerChoice = getPlayerChoice();
-  const computerChoice = getComputerChoice();
-  console.log(playRound(playerChoice, computerChoice));
-  console.log("**************");
-  if (verifyWinner(playerChoice, computerChoice) === "Player") {
-   playerScore++;
-  }
-  else if (verifyWinner(playerChoice, computerChoice) === "Computer") {
-   computerScore++;
-  }
- }
- console.log("Game Over")
- if (playerScore > computerScore) {
-  console.log("Player Wins");
- }
- else if (computerScore > playerScore) {
-  console.log("Computer Wins");
- }
- else {
-  console.log("We have a tie");
- }
+  playGame(playerScore, computerScore);
 }
 
-playGame()
+function scoreKeep(result, playerChoice, computerChoice) {
+  playerChoiceP.innerHTML = `You picked ${playerChoice}`;
+  computerChoiceP.innerHTML = `Computer picked ${computerChoice}`;
+  resultP.innerHTML = result;
+
+  if (result === "Player Wins") {
+    playerScoreP.innerHTML = `Player Score - ${playerScore}`;
+    computerScoreP.innerHTML = `Computer Score - ${computerScore}`;
+  } else result === "Computer Wins";
+  computerScoreP.innerHTML = `Computer Score - ${computerScore}`;
+  playerScoreP.innerHTML = `Player Score - ${playerScore}`;
+}
+
+function playGame(playerScore, computerScore) {
+  if (playerScore == 5 || computerScore == 5) setWinner();
+}
+
+function setWinner() {
+  let winner;
+  if (playerScore > computerScore) winner = "Player Is The Winner!";
+  else winner = "Computer Is The Winner!";
+
+  newGame.innerHTML = `
+  <h1>${winner}</h1>
+  <p>Player Score - ${playerScore}</p>
+  <p>Computer Score - ${computerScore}</p>
+  <button id="reset-game">Reset Game</button>
+  `;
+
+  playerScore = 0;
+  computerScore = 0;
+
+  const continueGame = document.getElementById("reset-game");
+  continueGame.addEventListener("click", () => {
+    newGame.innerHTML = ``;
+
+    resetGame();
+  });
+}
+
+function resetGame() {
+  playerChoiceP.innerHTML = "";
+  computerChoiceP.innerHTML = "";
+  resultP.innerHTML = "";
+  playerScoreP.innerHTML = "Player Score - 0";
+  computerScoreP.innerHTML = "Computer Score - 0";
+}
