@@ -11,9 +11,13 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <!-- GAME BOARD DISPLAYS PLAYER CHOICES AND ROUND RESULTS -->
     <div id="game-board">
       <h1>Rock Paper Scissors</h1>
-      <p id="tag-line">Let's Play!<br> Make Your Choice</p>
+      <p id="tag-line">
+        Let's Play!<br />
+        Make Your Choice
+      </p>
       <div class="container" id="container">
         <div class="choice">
           <p id="player-choice"></p>
@@ -22,20 +26,20 @@
         <p id="result"></p>
       </div>
 
-      <!-- <hr> -->
-
+      <!-- CONTAINER FOR BUTTON CHOICES -->
       <div class="btn-container">
         <button id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
         <button id="paper"><i class="fa-solid fa-hand"></i></button>
         <button id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
       </div>
+      <!-- CONTAINER FOR GAME SCORES -->
       <div class="score">
         <p id="player-score">Your Score: 0</p>
         <p id="computer-score">Computer Score: 0</p>
       </div>
-
     </div>
 
+    <!-- NEW BOARD DISPLAYS OVERALL GAME WINNER AND FINAL SCORE -->
     <div id="new-game-board"></div>
 
     <script src="rps.js"></script>

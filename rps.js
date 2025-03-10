@@ -16,6 +16,7 @@ let computerScore = 0;
 window.onload = getPlayerChoice();
 container.style.display = "none";
 
+// GETS COMPUTER GAME CHOICE
 function getComputerChoice() {
   const options = Math.floor(Math.random() * 3);
 
@@ -29,6 +30,7 @@ function getComputerChoice() {
   }
 }
 
+// GETS PLAYER CHOICE ONCE BUTTON CLICKED
 function getPlayerChoice() {
   rockBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
@@ -47,6 +49,7 @@ function getPlayerChoice() {
   });
 }
 
+// GET PLAYER AND COMPUTER CHOICE AND UPDATE SCORE
 function playRound(playerChoice) {
   let computerChoice = getComputerChoice();
 
@@ -66,6 +69,7 @@ function playRound(playerChoice) {
   playGame(playerScore, computerScore);
 }
 
+
 function scoreKeep(result, playerChoice, computerChoice) {
   playerChoiceP.innerHTML = `You picked : ${playerChoice}`;
   playerChoiceP.style.textShadow = "2px 2px 5px #3D8BFF";
@@ -81,6 +85,7 @@ function scoreKeep(result, playerChoice, computerChoice) {
   playerScoreP.innerHTML = `Your Score: ${playerScore}`;
 }
 
+// ROUNDS END WHEN ONE PLAYER REACHES 5 POINTS
 function playGame(playerScore, computerScore) {
   if (playerScore == 5 || computerScore == 5) setWinner();
 }
@@ -109,6 +114,7 @@ function setWinner() {
   });
 }
 
+// GAME RESET
 function resetGame() {
   tagLine.style.display = 'flex';
   gameBoard.style.display = 'flex';
