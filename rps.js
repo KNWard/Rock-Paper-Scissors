@@ -19,26 +19,27 @@ function getComputerChoice() {
 
   switch (options) {
     case 0:
-      return "rock";
+      return "Rock";
     case 1:
-      return "paper";
+      return "Paper";
     case 2:
-      return "scissors";
+      return "Scissors";
   }
 }
 
 function getPlayerChoice() {
   rockBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
-    return playRound("rock");
+    // gameBoard.style.display = 'flex';
+    return playRound("Rock");
   });
   paperBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
-    return playRound("paper");
+    return playRound("Paper");
   });
   scissorsBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
-    return playRound("scissors");
+    return playRound("Scissors");
   });
 }
 
@@ -46,14 +47,14 @@ function playRound(playerChoice) {
   let computerChoice = getComputerChoice();
 
   if (playerChoice === computerChoice) {
-    scoreKeep("", playerChoice, computerChoice);
+    scoreKeep("It's a Tie. No point", playerChoice, computerChoice);
   } else if (
-    (playerChoice === "rock" && computerChoice === "scissors") ||
-    (playerChoice == "scissors" && computerChoice == "paper") ||
-    (playerChoice == "paper" && computerChoice == "rock")
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice == "Scissors" && computerChoice == "Paper") ||
+    (playerChoice == "Paper" && computerChoice == "Rock")
   ) {
     playerScore++;
-    scoreKeep("Player's point", playerChoice, computerChoice);
+    scoreKeep("Your point", playerChoice, computerChoice);
   } else {
     computerScore++;
     scoreKeep("Computer's point", playerChoice, computerChoice);
@@ -62,16 +63,18 @@ function playRound(playerChoice) {
 }
 
 function scoreKeep(result, playerChoice, computerChoice) {
-  playerChoiceP.innerHTML = `Player picked ${playerChoice}`;
-  computerChoiceP.innerHTML = `Computer picked ${computerChoice}`;
+  playerChoiceP.innerHTML = `You picked : ${playerChoice}`;
+  playerChoiceP.style.textShadow = "2px 2px 5px #3D8BFF";
+  computerChoiceP.innerHTML = `Computer picked: ${computerChoice}`;
+  computerChoiceP.style.textShadow = "2px 2px 5px #FFCB6B";
   resultP.innerHTML = result;
 
-  if (result === "Player's point") {
-    playerScoreP.innerHTML = `Player Score: ${playerScore}`;
+  if (result === "Your point") {
+    playerScoreP.innerHTML = `Your Score: ${playerScore}`;
     computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
   } else result === "Computer's point";
   computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
-  playerScoreP.innerHTML = `Player Score: ${playerScore}`;
+  playerScoreP.innerHTML = `Your Score: ${playerScore}`;
 }
 
 function playGame(playerScore, computerScore) {
@@ -80,12 +83,13 @@ function playGame(playerScore, computerScore) {
 
 function setWinner() {
   let winner;
-  if (playerScore > computerScore) winner = "Player is The Winner!";
+  if (playerScore > computerScore) winner = "You're The Winner!";
   else winner = "Computer is The Winner!";
 
+  gameBoard.style.display = "none";
   newGame.innerHTML = `
   <h1>${winner}</h1>
-  <p>Player Score: ${playerScore}</p>
+  <p>Your Score: ${playerScore}</p>
   <p>Computer Score: ${computerScore}</p>
   <button id="reset-game">Reset Game</button>
   `;
@@ -103,6 +107,7 @@ function setWinner() {
 
 function resetGame() {
   tagLine.style.display = 'flex';
+  gameBoard.style.display = 'flex';
   playerChoiceP.innerHTML = "";
   computerChoiceP.innerHTML = "";
   resultP.innerHTML = "";
