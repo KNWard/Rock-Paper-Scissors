@@ -58,16 +58,16 @@ function playRound(playerChoice) {
 }
 
 function scoreKeep(result, playerChoice, computerChoice) {
-  playerChoiceP.innerHTML = `You picked ${playerChoice}`;
+  playerChoiceP.innerHTML = `Player picked ${playerChoice}`;
   computerChoiceP.innerHTML = `Computer picked ${computerChoice}`;
   resultP.innerHTML = result;
 
   if (result === "Player Wins") {
-    playerScoreP.innerHTML = `Player Score - ${playerScore}`;
-    computerScoreP.innerHTML = `Computer Score - ${computerScore}`;
+    playerScoreP.innerHTML = `Player Score: ${playerScore}`;
+    computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
   } else result === "Computer Wins";
-  computerScoreP.innerHTML = `Computer Score - ${computerScore}`;
-  playerScoreP.innerHTML = `Player Score - ${playerScore}`;
+  computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
+  playerScoreP.innerHTML = `Player Score: ${playerScore}`;
 }
 
 function playGame(playerScore, computerScore) {

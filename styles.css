@@ -1,0 +1,48 @@
+body {
+ background-color: grey;
+}
+
+#game-board {
+ border: 2px solid blue;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin: 40px 100px 20px 100px;
+}
+
+#game-board h1 {
+ font-size: 50px;
+}
+
+.container {
+ border: 1px solid green;
+ text-align: center;
+}
+
+.container p {
+ font-size: 30px;
+}
+
+.score {
+ border: 1px solid purple;
+ display: inline-flex;
+ justify-content: space-between;
+}
+
+.score p {
+ font-size: 25px;
+ padding: 10px;
+}
+
+.btn-container {
+ border: 1px solid red;
+}
+
+.btn-container button {
+ margin: 5px;
+ padding: 5px;
+ font-size: 18px;
+ border: none;
+ border-radius: 10px;
+}
