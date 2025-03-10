@@ -7,12 +7,14 @@ const playerChoiceP = document.getElementById("player-choice");
 const computerChoiceP = document.getElementById("computer-choice");
 const resultP = document.getElementById("result");
 const tagLine = document.getElementById("tag-line");
+const container = document.getElementById("container");
 const gameBoard = document.getElementById("game-board");
 const newGame = document.getElementById("new-game-board");
 let playerScore = 0;
 let computerScore = 0;
 
 window.onload = getPlayerChoice();
+container.style.display = "none";
 
 function getComputerChoice() {
   const options = Math.floor(Math.random() * 3);
@@ -30,15 +32,17 @@ function getComputerChoice() {
 function getPlayerChoice() {
   rockBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
-    // gameBoard.style.display = 'flex';
+    container.style.display = "flex";
     return playRound("Rock");
   });
   paperBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
+    container.style.display = "flex";
     return playRound("Paper");
   });
   scissorsBtn.addEventListener("click", (e) => {
     tagLine.style.display = 'none';
+    container.style.display = "flex";
     return playRound("Scissors");
   });
 }
@@ -108,6 +112,7 @@ function setWinner() {
 function resetGame() {
   tagLine.style.display = 'flex';
   gameBoard.style.display = 'flex';
+  container.style.display = "none";
   playerChoiceP.innerHTML = "";
   computerChoiceP.innerHTML = "";
   resultP.innerHTML = "";

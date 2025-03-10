@@ -13,8 +13,8 @@
   <body>
     <div id="game-board">
       <h1>Rock Paper Scissors</h1>
-      <p id="tag-line">Let's Play!</p>
-      <div class="container">
+      <p id="tag-line">Let's Play!<br> Make Your Choice</p>
+      <div class="container" id="container">
         <div class="choice">
           <p id="player-choice"></p>
           <p id="computer-choice"></p>
@@ -22,18 +22,18 @@
         <p id="result"></p>
       </div>
 
-      <hr>
-
-      <div class="score">
-        <p id="player-score">Your Score: 0</p>
-        <p id="computer-score">Computer Score: 0</p>
-      </div>
+      <!-- <hr> -->
 
       <div class="btn-container">
         <button id="rock"><i class="fa-solid fa-hand-back-fist"></i></button>
         <button id="paper"><i class="fa-solid fa-hand"></i></button>
         <button id="scissors"><i class="fa-solid fa-hand-scissors"></i></button>
       </div>
+      <div class="score">
+        <p id="player-score">Your Score: 0</p>
+        <p id="computer-score">Computer Score: 0</p>
+      </div>
+
     </div>
 
     <div id="new-game-board"></div>

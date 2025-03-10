@@ -7,13 +7,8 @@
 }
 
 body {
- /* background-color: black; */
+ background-color: black;
  background: linear-gradient(90deg, hsla(39, 100%, 71%, 1) 0%, hsla(216, 100%, 62%, 1) 100%);;
-}
-
-hr {
- width: 80%;
- border-color: black;
 }
 
 #game-board {
@@ -23,18 +18,19 @@ hr {
  justify-content: center;
  align-items: center;
  margin: 40px 100px 0px 100px;
- /* background-color: #4b644a; */
 }
 
 #game-board h1 {
- font-size: 50px;
+ /* border: 2px solid yellow; */
+ font-size: 70px;
  text-shadow: 2px 2px 5px whitesmoke;
 }
 
 #tag-line {
  /* border: 1px solid blue; */
- margin-top: 80px;
+ margin: 30px 0;
  display: flex;
+ text-align: center;
  font-size: 50px;
  font-weight: bold;
  text-shadow: 2px 2px 5px whitesmoke;
@@ -42,13 +38,15 @@ hr {
 
 .container {
  /* border: 1px solid green; */
+ display: flex;
+ flex-direction: column;
  text-align: center;
- height: 200px;
+ height: 150px;
  padding: 10px;
 }
 
 .container p {
- font-size: 30px;
+ font-size: 40px;
  margin: 0 15px;
 }
 
@@ -65,24 +63,19 @@ hr {
  color: black;
  text-shadow: 2px 2px 5px whitesmoke;
  border-radius: 5px;
- font-size: 25px;
+ font-size: 35px;
 }
 
-.score {
- /* border: 1px solid purple; */
- display: inline-flex;
- justify-content: space-between;
-}
 
-.score p {
- font-size: 25px;
- font-weight: bold;
+.btn-container {
+ /* border: 2px solid green; */
+ margin: 15px 0;
  padding: 10px;
 }
 
 .btn-container button {
  width: 110px;
- margin: 5px;
+ margin: 15px;
  padding: 10px;
  font-size: 50px;
  border: 5px solid black;
@@ -96,6 +89,19 @@ hr {
 .btn-container button:hover {
  background-color: whitesmoke;
  color: #3D8BFF;
+}
+
+.score {
+ /* border: 1px solid purple; */
+ margin-top: 20px;
+ display: inline-flex;
+ justify-content: space-between;
+}
+
+.score p {
+ font-size: 40px;
+ font-weight: bold;
+ padding: 10px;
 }
 
 #new-game-board {
@@ -112,14 +118,14 @@ hr {
  padding: 8px;
  /* background-color: #000000; */
  color: #000000;
- font-size: 50px;
+ font-size: 60px;
  text-shadow: 2px 2px 5px whitesmoke;
  border-radius: 5px;
 }
 
 #new-game-board p {
  /* border: 1px solid green; */
- font-size: 25px;
+ font-size: 45px;
 }
 
 #new-game-board button {
@@ -137,4 +143,138 @@ hr {
 
 #new-game-board button:hover {
  background-color: whitesmoke;
+}
+
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media only screen and (max-width: 768px) {
+ #result {
+  margin: 35px 0 50px;
+ }
+
+ .btn-container {
+  margin: 70px 0 10px;
+  padding: 0;
+ }
+
+ #new-game-board {
+  margin: 40px 10px;
+ }
+}
+
+@media only screen and (max-width: 425px) {
+ #game-board {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+ }
+
+ #game-board h1 {
+  font-size: 40px;
+ }
+
+ #tag-line {
+  /* border: 1px solid blue; */
+  font-size: 30px;
+ }
+
+ .container {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 150px;
+  padding: 10px;
+ }
+ 
+ .container p {
+  font-size: 25px;
+  margin: 0 15px;
+ }
+ 
+ .choice {
+  display: flex;
+  flex-direction: row;
+ }
+ 
+ #result {
+  /* border: 3px solid red; */
+  margin-top: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  color: black;
+  text-shadow: 2px 2px 5px whitesmoke;
+  border-radius: 5px;
+  font-size: 25px;
+ }
+
+ .btn-container {
+  /* border: 2px solid green; */
+  margin: 8px 0;
+  padding: 10px;
+ }
+ 
+ .btn-container button {
+  width: 80px;
+  margin: 15px;
+  padding: 10px;
+  font-size: 30px;
+ }
+
+ .score {
+  /* border: 1px solid purple; */
+  margin-top: 20px;
+  display: inline-flex;
+  justify-content: space-between;
+ }
+ 
+ .score p {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+ }
+
+ #new-game-board {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 10px;
+  /* background-color: #4b644a; */
+ }
+ 
+ #new-game-board h1 {
+  padding: 8px;
+  /* background-color: #000000; */
+  color: #000000;
+  font-size: 32px;
+  text-shadow: 2px 2px 5px whitesmoke;
+  border-radius: 5px;
+ }
+ 
+ #new-game-board p {
+  /* border: 1px solid green; */
+  font-size: 30px;
+ }
+ 
+ #new-game-board button {
+  padding: 5px 15px;
+  margin: 20px 0;
+  font-size: 22px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+  box-shadow: 10px 10px 5px grey;
+ 
+ }
+ 
+ #new-game-board button:hover {
+  background-color: whitesmoke;
+ }
 }
