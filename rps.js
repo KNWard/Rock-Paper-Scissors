@@ -6,6 +6,7 @@ const computerScoreP = document.getElementById("computer-score");
 const playerChoiceP = document.getElementById("player-choice");
 const computerChoiceP = document.getElementById("computer-choice");
 const resultP = document.getElementById("result");
+const tagLine = document.getElementById("tag-line");
 const gameBoard = document.getElementById("game-board");
 const newGame = document.getElementById("new-game-board");
 let playerScore = 0;
@@ -28,12 +29,15 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
   rockBtn.addEventListener("click", (e) => {
+    tagLine.style.display = 'none';
     return playRound("rock");
   });
   paperBtn.addEventListener("click", (e) => {
+    tagLine.style.display = 'none';
     return playRound("paper");
   });
   scissorsBtn.addEventListener("click", (e) => {
+    tagLine.style.display = 'none';
     return playRound("scissors");
   });
 }
@@ -49,10 +53,10 @@ function playRound(playerChoice) {
     (playerChoice == "paper" && computerChoice == "rock")
   ) {
     playerScore++;
-    scoreKeep("Player Wins", playerChoice, computerChoice);
+    scoreKeep("Player's point", playerChoice, computerChoice);
   } else {
     computerScore++;
-    scoreKeep("Computer Wins", playerChoice, computerChoice);
+    scoreKeep("Computer's point", playerChoice, computerChoice);
   }
   playGame(playerScore, computerScore);
 }
@@ -62,10 +66,10 @@ function scoreKeep(result, playerChoice, computerChoice) {
   computerChoiceP.innerHTML = `Computer picked ${computerChoice}`;
   resultP.innerHTML = result;
 
-  if (result === "Player Wins") {
+  if (result === "Player's point") {
     playerScoreP.innerHTML = `Player Score: ${playerScore}`;
     computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
-  } else result === "Computer Wins";
+  } else result === "Computer's point";
   computerScoreP.innerHTML = `Computer Score: ${computerScore}`;
   playerScoreP.innerHTML = `Player Score: ${playerScore}`;
 }
@@ -76,13 +80,13 @@ function playGame(playerScore, computerScore) {
 
 function setWinner() {
   let winner;
-  if (playerScore > computerScore) winner = "Player Is The Winner!";
-  else winner = "Computer Is The Winner!";
+  if (playerScore > computerScore) winner = "Player is The Winner!";
+  else winner = "Computer is The Winner!";
 
   newGame.innerHTML = `
   <h1>${winner}</h1>
-  <p>Player Score - ${playerScore}</p>
-  <p>Computer Score - ${computerScore}</p>
+  <p>Player Score: ${playerScore}</p>
+  <p>Computer Score: ${computerScore}</p>
   <button id="reset-game">Reset Game</button>
   `;
 
@@ -98,9 +102,10 @@ function setWinner() {
 }
 
 function resetGame() {
+  tagLine.style.display = 'flex';
   playerChoiceP.innerHTML = "";
   computerChoiceP.innerHTML = "";
   resultP.innerHTML = "";
-  playerScoreP.innerHTML = "Player Score - 0";
-  computerScoreP.innerHTML = "Computer Score - 0";
+  playerScoreP.innerHTML = "Player Score: 0";
+  computerScoreP.innerHTML = "Computer Score: 0";
 }
