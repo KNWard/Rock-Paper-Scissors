@@ -66,31 +66,31 @@ function playGame() {
  }
   
  // Score logic- computer and player score variables
-//  let playerScore = 0;
-//  let computerScore = 0;
-//  console.log("Welcome! Let's play.")
-//  for (let i = 0; i < 5; i++){
-//   const playerChoice = getPlayerChoice();
-//   const computerChoice = getComputerChoice();
-//   console.log(playRound(playerChoice, computerChoice));
-//   console.log("**************");
-//   if (verifyWinner(playerChoice, computerChoice) === "Player") {
-//    playerScore++;
-//   }
-//   else if (verifyWinner(playerChoice, computerChoice) === "Computer") {
-//    computerScore++;
-//   }
-//  }
-//  console.log("Game Over")
-//  if (playerScore > computerScore) {
-//   console.log("Player Wins");
-//  }
-//  else if (computerScore > playerScore) {
-//   console.log("Computer Wins");
-//  }
-//  else {
-//   console.log("We have a tie");
-//  }
+ let playerScore = 0;
+ let computerScore = 0;
+ console.log("Welcome! Let's play.")
+ for (let i = 0; i < 5; i++){
+  const playerChoice = getPlayerChoice();
+  const computerChoice = getComputerChoice();
+  console.log(playRound(playerChoice, computerChoice));
+  console.log("**************");
+  if (verifyWinner(playerChoice, computerChoice) === "Player") {
+   playerScore++;
+  }
+  else if (verifyWinner(playerChoice, computerChoice) === "Computer") {
+   computerScore++;
+  }
+ }
+ console.log("Game Over")
+ if (playerScore > computerScore) {
+  console.log("Player Wins");
+ }
+ else if (computerScore > playerScore) {
+  console.log("Computer Wins");
+ }
+ else {
+  console.log("We have a tie");
+ }
 }
 
 playGame()

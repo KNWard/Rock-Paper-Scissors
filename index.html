@@ -6,10 +6,28 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock! Paper! Scissors!</h1>
-    <button>Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
+    <div id="game-board">
+      <h1>Rock Paper Scissors</h1>
+      <div class="container">
+        <p id="result"></p>
+        <p id="player-choice"></p>
+        <p id="computer-choice"></p>
+      </div>
+  
+      <div>
+        <p id="player-score">Player Score - 0</p>
+        <p id="computer-score">Computer Score - 0</p>
+      </div>
+  
+      <div>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+    </div>
+  
+    <div id="new-game-board"></div>
+    
     <script src="rps.js"></script>
   </body>
 </html>
