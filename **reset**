@@ -1,0 +1,155 @@
+[33mcommit 4f1f5becfae596717acc38f4bb8e4077c2e42034[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 19:48:23 2025 -0400
+
+    Updated README file.
+
+[33mcommit 0b7cc02ce924a1cd43969b06ea369185ef235987[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 19:26:29 2025 -0400
+
+    Added comments to HTML and JS files
+
+[33mcommit 515ecd1dd0aa9ca38adabf62abecfbfc0d3bbb0b[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 18:28:48 2025 -0400
+
+    Finished styling and media queries for responsiveness. Added somevariables in JS file for styling purposes.
+
+[33mcommit 64b0f2df34b365fb45b7c9adf085953f1d94e982[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 16:53:41 2025 -0400
+
+    Made styling edits in CSS, HTML and JS file.
+
+[33mcommit adc2a7699ce5ccbc35d8b8265fbddf687f5c8ca4[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 11:38:29 2025 -0400
+
+    Added icons to choice buttons. Edited text in JS. Edited styling in CSS.
+
+[33mcommit 94bd6aa4224f39ad98515983a96cd540ff0c1590[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 09:55:18 2025 -0400
+
+    Added class names to div 's. added some styling. Changed 'score' text in JS.
+
+[33mcommit 8e973c3ac8ba04f6eb10808d710ac81d84a41793[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 09:23:12 2025 -0400
+
+    Added link tag to stylesheet in HTML. Added stylesheet to document.
+
+[33mcommit 7b7d8c8b199f0ecb4f1eead2e53333d4007067cb[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 09:17:31 2025 -0400
+
+    Added reworked JS for UI of Rock Paper Scissors Game.
+
+[33mcommit 832107990f2465f417deac3ae7709bb784b54088[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Mar 10 09:14:36 2025 -0400
+
+    Added new HTML to document
+
+[33mcommit 5e93738e6ada95251e48140c6555853f0413dce8[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Sat Mar 8 16:46:16 2025 -0500
+
+    New branch, adding UI to project
+
+[33mcommit 084792b43aff00e9e596617418cd0c50b21414ec[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Wed Jan 15 11:24:11 2025 -0500
+
+    Updated README file.
+
+[33mcommit d39633d40f202478ad09e602396f8e94f944393b[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Wed Jan 15 11:14:01 2025 -0500
+
+    Added commants and changed some console.log messages.
+
+[33mcommit c079e8e0aff9c802e07d1fe2bc525ffd76500285[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Wed Jan 15 11:03:44 2025 -0500
+
+    Moved playRound function into playGame function.
+
+[33mcommit 67934757137373adade22167de65c2c899379e75[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Tue Jan 14 13:44:41 2025 -0500
+
+    Finished JS game steps
+
+[33mcommit cd6a1e8b72acd89a98abf7e1b65d26110c993363[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Tue Jan 14 12:05:51 2025 -0500
+
+    Began work on step 5- logic to play single round
+
+[33mcommit b7fc4f34fadf0d90b1098cb652bbe29b575800fa[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Jan 13 13:42:41 2025 -0500
+
+    Added step directions(commented out)
+
+[33mcommit cf27620fc4645fa7b8e96b6f7cb28a2d4d852056[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Jan 13 13:40:39 2025 -0500
+
+    Created two variables for human and computer scores.
+
+[33mcommit e6cf7d1711861e106ce129b3d9d3e537d37652dd[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Jan 13 13:32:34 2025 -0500
+
+    Called function getHumanChoice
+
+[33mcommit c92e16149031e5aecaab756d21b56b743534d06b[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Jan 13 13:28:48 2025 -0500
+
+    Wrote  computer choice and human choice functions.
+
+[33mcommit afa3da2973ad3900cbc61f0e7ede205e7102947a[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 18:42:35 2024 -0500
+
+    Working on computer choice function
+
+[33mcommit 8381e9ac123446b1994cb249d5c9dce2674b4c42[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 13:34:03 2024 -0500
+
+    Commented out console.log
+
+[33mcommit 76145f70e3198f477b8c23b97ea87faa51b3e6cd[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 13:09:48 2024 -0500
+
+    Created external JS file and linked to html file.
+
+[33mcommit ece3ef5953a25361d73e018ad53a4bb588c5670c[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 13:05:54 2024 -0500
+
+    Added title to index.html. Added script tag to index.html.
+
+[33mcommit e52f0a0bc03a3bed24216e886646edc31085c904[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 13:02:07 2024 -0500
+
+    Added boiler plate HTML to index.html.
+
+[33mcommit e67b62b5938a1db4aaa169a0d2812905daa282cf[m
+Author: Kendra <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 12:59:22 2024 -0500
+
+    Add index.html
+
+[33mcommit aa4cef3f9b5d5c64bbd049c6062c26a8bff7d1f7[m
+Author: Kendra Ward <92537842+KNWard@users.noreply.github.com>
+Date:   Mon Dec 16 12:45:03 2024 -0500
+
+    Initial commit
